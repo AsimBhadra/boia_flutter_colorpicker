@@ -1086,6 +1086,7 @@ class _AppColorTextFieldState extends State<AppColorTextField> {
   @override
   void dispose() {
     textEditingController.dispose();
+    focusNode.removeListener(focusNode.dispose);
     super.dispose();
   }
 
